@@ -11,7 +11,7 @@ public class JwtContsant {
     static String SIGNINGKEY;
     static long EXPIRATION;
 
-    @Value("${jwt.signingKey")
+    @Value("${jwt.signingKey}")
     public void setSIGNINGKEY(String signingkey){
         SIGNINGKEY = signingkey;
     }
