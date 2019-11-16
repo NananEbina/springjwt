@@ -8,10 +8,10 @@ public class JwtContsant {
     /**
      * 不能直接给静态变量用@Value赋值
      */
-    public static String SIGNINGKEY;
-    public static long EXPIRATION;
+    static String SIGNINGKEY;
+    static long EXPIRATION;
 
-    @Value("${jwt.signingKey}")
+    @Value("${jwt.signingKey")
     public void setSIGNINGKEY(String signingkey){
         SIGNINGKEY = signingkey;
     }
