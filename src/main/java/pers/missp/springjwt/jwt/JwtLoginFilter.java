@@ -48,7 +48,8 @@ public class JwtLoginFilter extends AbstractAuthenticationProcessingFilter {
         response.setContentType("application/json;charset=utf-8");
         response.setHeader("Authorization", "Bearer " + jwt);
         PrintWriter out = response.getWriter();
-        out.write("Bearer " + jwt);
+        String token = "Bearer " + jwt;
+        out.write("{\"message\": \"" + token + "\"}");
         out.flush();
         out.close();
     }
